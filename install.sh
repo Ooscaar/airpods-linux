@@ -32,7 +32,7 @@ cat > /etc/systemd/system/airpods.service << EOF
 Description=AirPods Battery Monitor
 
 [Service]
-ExecStart=/home/$(whoami)/bin/apodsmon /tmp/apodsmon.out
+ExecStart=/usr/bin/python3 /home/$(whoami)/bin/main.py /tmp/airpods.out
 
 [Install]
 WantedBy=default.target
