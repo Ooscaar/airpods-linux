@@ -29,8 +29,8 @@ echo "[*] Installing python requirements: ok!"
 echo "[*] Setting up systemd service"
 cp systemd/airpods.service /etc/systemd/system/
 systemctl daemon-reload
-sytemctl start airpods.service
-sytemctl status airpods.service
+systemctl start airpods.service
+systemctl status airpods.service
 echo "[*] Setting up systemd service: ok!"
 
 echo "[*] Success!!"
