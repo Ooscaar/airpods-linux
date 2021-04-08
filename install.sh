@@ -11,6 +11,11 @@ set -e
 # the polybar configuration should be updated manually
 
 
+if [ "$EUID" -ne 0 ]; then
+	echo "Please run as root"
+	exit 1
+fi
+
 echo "[*] Installing scripts"
 mkdir ~/bin
 cp ./polybar/polybar.sh ~/bin/
