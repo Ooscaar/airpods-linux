@@ -27,8 +27,16 @@ pip install -r requirements.txt
 echo "[*] Installing python requirements: ok!"
 
 echo "[*] Setting up systemd service"
-cp systemd/airpods.service /etc/systemd/system/
-systemctl daemon-reload
+cat > /etc/systemd/system/airpods.service << EOF
+[Unit]
+Description=AirPods Battery Monitor
+
+[Service]
+ExecStart=/home/$(whomai)/bin/apodsmon /tmp/apodsmon.out
+
+[Install]
+WantedBy=default.target
+EOF
 systemctl start airpods.service
 systemctl status airpods.service
 echo "[*] Setting up systemd service: ok!"
