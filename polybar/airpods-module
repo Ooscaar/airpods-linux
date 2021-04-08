@@ -1,0 +1,6 @@
+[module/airpods]
+type = custom/script
+exec = ~/bin/polybar.sh
+interval = 5
+label-font = 3
+format-underline = #76dd21

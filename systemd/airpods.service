@@ -1,0 +1,9 @@
+[Unit]
+Description=AirPods Battery Monitor
+
+[Service]
+ExecStart=/usr/bin/python3 /home/op/bin/main.py /tmp/airpods.out
+
+[Install]
+WantedBy=default.target
+
