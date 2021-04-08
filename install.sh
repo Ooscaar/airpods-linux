@@ -1,5 +1,5 @@
 #!/bin/bash
-cd $(dirname $0)/..
+cd $(dirname $0)
 set -e
 
 # Date: 08/04/2021
@@ -12,8 +12,8 @@ set -e
 
 
 echo "[*] Installing scripts"
-cp polybar/polybar.sh ~/bin/
-cp systemd/main.py ~/bin/
+cp ./polybar/polybar.sh ~/bin/
+cp ./systemd/main.py ~/bin/
 echo "[*] Installing scripts: ok!"
 
 echo "[*] Installing python requirements"
