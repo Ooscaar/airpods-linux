@@ -12,8 +12,8 @@ set -e
 
 
 echo "[*] Installing scripts"
-cp ./polybar/polybar.sh ~/bin/
-cp ./systemd/main.py ~/bin/
+cp -r ./polybar/polybar.sh ~/bin/
+cp -r ./systemd/main.py ~/bin/
 echo "[*] Installing scripts: ok!"
 
 echo "[*] Installing python requirements"
